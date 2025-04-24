@@ -22,9 +22,7 @@ export const authOption: NextAuthOptions = {
       userinfo: `${process.env.UAEPASS_BASE_URL}/idshub/userinfo`,
       token: `${process.env.UAEPASS_BASE_URL}/idshub/token`,
       profile: async (profile, token) => {
-        // const { ...profiledata } = profile;
         return {
-          // ...profiledata,
           access_token: token.access_token,
           id: profile.uuid,
           uuid: profile.uuid,
